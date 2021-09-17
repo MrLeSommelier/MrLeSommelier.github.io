@@ -34220,25 +34220,6 @@ a.u-link.u-text-hover-grey-90:hover {
   height: 100%;
 }
 
-.u-header .u-menu-1 {
-  margin: -60px 0 22px auto;
-}
-
-.u-header .u-nav-1 {
-  font-size: 1rem;
-  letter-spacing: 0px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.u-header .u-nav-2 {
-  font-size: 1.25rem;
-}
-@media (max-width: 1199px) {
-  .u-header .u-menu-1 {
-    width: auto;
-  }
-}
 
 
 
@@ -34262,6 +34243,7 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-footer .u-image-1 {
   height: 121px;
   width: 362px;
+  animation-duration: 1000ms;
   margin: -7px auto -8px;
 }
 

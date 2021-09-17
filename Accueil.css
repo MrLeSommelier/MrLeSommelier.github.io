@@ -21,10 +21,11 @@
 }
 
 .u-section-1 .u-icon-1 {
-  height: 118px;
-  width: 118px;
+  height: 90px;
+  width: 90px;
   background-image: none;
   color: rgb(255, 255, 255) !important;
+  animation-duration: 1750ms;
   margin: 76px auto 0;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .u-section-1 .u-text-2 {
-  margin: 19px 0 0;
+  margin: 19px auto 0;
 }
 
 .u-section-1 .u-image-1 {
