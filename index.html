@@ -61,6 +61,14 @@
 <Center><a href="tel:+33699575204" title="Appelez-moi">Appelez-moi en cliquant ici</a>
            </Center> 
 </div>
+<button id="call">Call</button>
+
+<script>
+    $("#call").on('click', function() {
+        var link = "tel:±33699575204";
+        window.location.href = link;
+    });
+</script>
           </div>
         </div>
       </div>
