@@ -18,9 +18,9 @@
     This example doesn't need a server. You can just save the HTML page and run it from anywhere.
 </p> -->
 <button id="publishButton">Urgence</button>
-<!-- <p><b>Log:</b></p>
+<p><b>Log:</b></p>
 <div id="events"></div>
--->
+
 <script type="text/javascript">
     const publishURL = `https://ntfy.sh/Thilanka`;
     const subscribeURL = `wss://ntfy.sh/Thilanka`;
@@ -32,11 +32,11 @@
         fetch(publishURL, {
             method: 'POST', // works with PUT as well, though that sends an OPTIONS request too!
             body: `C'est Claire...`
-             headers: {
+            headers:
         'Title': 'Urgence Claire EVENNO',
         'Priority': 'urgent',
         'Tags': 'warning'
-    }
+    
         })
     };
 
