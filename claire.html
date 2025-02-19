@@ -10,8 +10,8 @@
     </style>
 </head>
 <body>
-<h1>Emergency</h1>
-<!--<p>
+<!-- <h1>Emergency</h1>
+<p>
     This is an example showing how to use <a href="https://ntfy.sh">ntfy.sh</a> with
     <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket">WebSocket</a>.<br/>
     This example doesn't need a server. You can just save the HTML page and run it from anywhere.
@@ -31,6 +31,11 @@
         fetch(publishURL, {
             method: 'POST', // works with PUT as well, though that sends an OPTIONS request too!
             body: `C'est Claire...`
+             headers: {
+        'Title': 'Urgence Claire EVENNO',
+        'Priority': 'urgent',
+        'Tags': 'warning'
+    }
         })
     };
 
