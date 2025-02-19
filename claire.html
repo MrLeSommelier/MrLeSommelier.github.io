@@ -11,11 +11,11 @@
 </head>
 <body>
 <h1>Emergency</h1>
-<p>
+<!--<p>
     This is an example showing how to use <a href="https://ntfy.sh">ntfy.sh</a> with
     <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket">WebSocket</a>.<br/>
     This example doesn't need a server. You can just save the HTML page and run it from anywhere.
-</p>
+</p> -->
 <button id="publishButton">Urgence</button>
 <p><b>Log:</b></p>
 <div id="events"></div>
@@ -30,7 +30,7 @@
     document.getElementById("publishButton").onclick = () => {
         fetch(publishURL, {
             method: 'POST', // works with PUT as well, though that sends an OPTIONS request too!
-            body: `It is ${new Date().toString()}. This is a test.`
+            body: `C'est Claire...`
         })
     };
 
