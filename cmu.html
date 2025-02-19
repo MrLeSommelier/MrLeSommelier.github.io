@@ -3,8 +3,37 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<script>
 
+window.onload = function(){
+    var el = document.getElementById("OnTick"); 
+    el.addEventListener("click", function(){
+        el.style.display = 'none';
+        var videoContener = document.getElementById('video2');
+        var video = document.createElement('video');
+
+        videoContener.style.width = window.innerWidth;
+        videoContener.style.height = window.innerHeight;
+
+        video.src = 'https://mrlesommelier.github.io/cmu.mp4';
+        video.style.width = "100%";
+        video.autoPlay = true;
+        video.controls = falsee;
+
+        videoContener.appendChild(video);
+
+    }, false); 
+}
+
+</script>
+<body style='margin:0px'>
+    <div id='video2' style='overflow: hidden;'></div>
+    <span id='OnTick' style='width:20px;height:20px;background-color:#323232;display:block'>  </span>
+</body>
+
+</html>
+
+  <!--<body>
 
 
 <video width="100%" controls="false" id="myvideo" autoplay="autoplay" muted loop>>
