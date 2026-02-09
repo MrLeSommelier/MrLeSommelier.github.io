@@ -17,7 +17,8 @@
     <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket">WebSocket</a>.<br/>
     This example doesn't need a server. You can just save the HTML page and run it from anywhere.
 </p> -->
-<button id="publishButton">Urgence</button>
+<center><button id="publishButton">Urgence</button></center>
+    
 <p><b>Log:</b></p>
 <div id="events"></div>
 
@@ -31,7 +32,7 @@
     document.getElementById("publishButton").onclick = () => {
         fetch(publishURL, {
             method: 'POST', // works with PUT as well, though that sends an OPTIONS request too!
-            body: `C'est Claire...`
+            body: `C'est Claire... J'ai une urgence!`
                 
         })
     };
