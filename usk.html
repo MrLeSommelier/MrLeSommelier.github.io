@@ -3,6 +3,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="stylesheet" href="./photo.css">
+    <script>
+  function displayText() {
+  var text = document.getElementById("textField");
+  text.style.display = "block";
+}
+</script>
   <!-- <i>There are two rules for success: 1) Never tell everything you know.</i>
 <br><br>
 ― Roger H. Lincoln -->
@@ -36,11 +42,12 @@
    <div class="centre">
  <!--   <span> <button style="height:200px;width:200px" id="publishButton"><bold>In case of emergency just click</bold></button></span>
      #b51212
-   --><div class="btn-container">
-     <span> <button id="btn4" style="background-color: red; color: white; height: 320px; width: 320px"> <bouton style="background-color: red; color: white; height: 320px; width: 320px" id="publishButton"><b><H1>In case of emergency just click</H1></b></button></bouton></span>
-     <p id="btn4-text" class="hidden">Alerte d'urgence envoyée à Thilanka !</p>
-        </div>
-     </div>
+   --><button onclick="displayText()">Click Me!</button>
+     <span><bouton style="background-color: red; color: white; height: 320px; width: 320px" id="publishButton" onclick="displayText()"><b><H1>In case of emergency just click</H1></b></button></bouton></span>
+     <div id="textField" style="display: none;">
+  Alerte d'urgence envoyée à Thilanka !
+</div>
+           </div>
 </Center>
 </div> 
   </br>
@@ -81,8 +88,6 @@
     const subscribeURL = `wss://ntfy.sh/Thilanka`;
     const events = document.getElementById('events');
     const websocket = new WebSocket(subscribeURL);
-const btn4Text = document.getElementById('btn4-text');
-const btn4 = document.getElementById('btn4');
 
     // Publish button
     document.getElementById("publishButton").onclick = () => {
@@ -111,15 +116,7 @@ const btn4 = document.getElementById('btn4');
         event.innerHTML = e.data;
         events.appendChild(event);
     }; 
-btn4.addEventListener('click', () => {
-  btn4Text.classList.remove('hidden');
-  btn4Text.classList.add('popup-message');
-});
 
-btn4Text.addEventListener('animationend', () => {
-  btn4Text.classList.remove('popup-message');
-  btn4Text.classList.add('hidden');
-});
   </script>
 </body>
     
