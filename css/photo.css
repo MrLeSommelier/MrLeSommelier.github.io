@@ -41,4 +41,10 @@
     content: "";
     width: 350px;
   }
+
+img:click {
+  width: 100%;
+  height: 100%;
+}
+
   
