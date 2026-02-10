@@ -36,7 +36,7 @@
    <div class="centre">
  <!--   <span> <button style="height:200px;width:200px" id="publishButton"><bold>In case of emergency just click</bold></button></span>
      #b51212
-   --> <span> <button style="background-color: red; color: white; height: 320px; width: 320px" id="publishButton"><b><H1>In case of emergency just click</H1></b></button></span>
+   --> <span> <button style="background-color: red; color: white; height: 320px; width: 320px" id="publishButton" ondblclick="myalert()"><b><H1>In case of emergency just click</H1></b></button></span>
         </div>
 </Center>
 </div> 
@@ -87,6 +87,9 @@
           headers: { 'Priority': '5', 'Tags' : 'rotating_light, warning', 'Title' : 'Urgence Claire E.', 'Tags' : 'rotating_light, warning', }
                 
         })
+    };
+      function myalert() {
+        alert("L'alerte à été envoyée à Thilanka");
     };
 
    // Incoming events
