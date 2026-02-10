@@ -43,6 +43,48 @@
       <img src="./CETD.jpg"  style="width:55% ; heigth:55%">
 <!--    </div>  <-->
       </center>
+</br>
+</br>
+</br>
+  <div class="center">
+    <span> <button style="height:200px;width:200px" id="publishButton">Urgence</button></span>
+        </div>
+    
+<p><b>Log:</b></p>
+<div id="events"></div>
+
+<script type="text/javascript">
+    const publishURL = `https://ntfy.sh/Thilanka`;
+    const subscribeURL = `wss://ntfy.sh/Thilanka`;
+    const events = document.getElementById('events');
+    const websocket = new WebSocket(subscribeURL);
+
+    // Publish button
+    document.getElementById("publishButton").onclick = () => {
+        fetch(publishURL, {
+            method: 'POST', // works with PUT as well, though that sends an OPTIONS request too!
+            body: `C'est Claire... J'ai une urgence!`
+                
+        })
+    };
+
+    // Incoming events
+    websocket.onopen = () => {
+        let event = document.createElement('div');
+        event.innerHTML = `WebSocket connected to ${subscribeURL}`;
+        events.appendChild(event);
+    };
+    websocket.onerror = (e) => {
+        let event = document.createElement('div');
+        event.innerHTML = `WebSocket error: Failed to connect to ${subscribeURL}`;
+        events.appendChild(event);
+    };
+    websocket.onmessage = (e) => {
+        let event = document.createElement('div');
+        event.innerHTML = e.data;
+        events.appendChild(event);
+    };
+</script>
 </body>
     
  
