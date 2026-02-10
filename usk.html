@@ -63,8 +63,8 @@
     document.getElementById("publishButton").onclick = () => {
         fetch(publishURL, {
             method: 'POST', // works with PUT as well, though that sends an OPTIONS request too!
-       headers: { 'Priority': '5', 'Tags' : 'rotating_light, warning', 'Title' : 'Urgence Claire E.', 'Tags' : 'rotating_light, warning', }
-            body: `C'est Claire... J'ai une urgence!`
+            body: `C'est Claire... J'ai une urgence!`,
+          headers: { 'Priority': '5', 'Tags' : 'rotating_light, warning', 'Title' : 'Urgence Claire E.', 'Tags' : 'rotating_light, warning', },
                 
         })
     };
