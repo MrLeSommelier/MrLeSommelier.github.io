@@ -36,8 +36,11 @@
    <div class="centre">
  <!--   <span> <button style="height:200px;width:200px" id="publishButton"><bold>In case of emergency just click</bold></button></span>
      #b51212
-   --> <span> <button style="background-color: red; color: white; height: 320px; width: 320px" id="publishButton" onclick="myalert()"><b><H1>In case of emergency just click</H1></b></button></span>
+   --><div class="btn-container">
+     <span> <button style="background-color: red; color: white; height: 320px; width: 320px" id="publishButton; btn4"><b><H1>In case of emergency just click</H1></b></button></span>
+     <p id="btn4-text" class="hidden">Alerte d'urgence envoyée à Thilanka !</p>
         </div>
+     </div>
 </Center>
 </div> 
   </br>
@@ -109,6 +112,19 @@
         events.appendChild(event);
     }; 
 </script>
+  <script>const btn4Text = document.getElementById('btn4-text');
+const btn4 = document.getElementById('btn4');
+
+btn4.addEventListener('click', () => {
+  btn4Text.classList.remove('hidden');
+  btn4Text.classList.add('popup-message');
+});
+
+btn4Text.addEventListener('animationend', () => {
+  btn4Text.classList.remove('popup-message');
+  btn4Text.classList.add('hidden');
+});
+  </script>
 </body>
     
  
