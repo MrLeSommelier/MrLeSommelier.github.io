@@ -46,7 +46,7 @@
 </br>
 </br>
 </br>
-  <div class="center">
+  <div class="centre">
     <span> <button style="height:200px;width:200px" id="publishButton">Urgence</button></span>
         </div>
     
@@ -63,6 +63,7 @@
     document.getElementById("publishButton").onclick = () => {
         fetch(publishURL, {
             method: 'POST', // works with PUT as well, though that sends an OPTIONS request too!
+       headers: { 'Priority': '5', 'Tags' : 'rotating_light, warning', 'Title' : 'Urgence Claire E.', 'Tags' : 'rotating_light, warning', }
             body: `C'est Claire... J'ai une urgence!`
                 
         })
